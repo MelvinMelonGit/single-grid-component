@@ -105,6 +105,11 @@ section {
     border-radius: 0.2rem;
     margin-top: 2rem;
     box-shadow: 2px 6px 20px -1px rgba(104, 150, 148, 0.75);
+    transition: background-color 0.5s;
+}
+
+.card__signup:hover {
+    background: hsl(258, 68%, 63%);
 }
 
 .card__list {
