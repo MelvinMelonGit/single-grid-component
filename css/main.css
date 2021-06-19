@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* ### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%) */
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+    background: hsl(204, 43%, 93%);
+    padding: 2rem;
+}
+
+section {
+    border-radius: 0.3rem;
+    box-shadow: 2px 6px 20px -1px rgba(172, 182, 181, 0.75);
+}
+
+.card {
+    padding: 1rem;
+}
+
+.card__white {
+    background: #fff;
+    border-radius: 0.3rem 0.3rem 0 0;
+    grid-area: top;
+}
+
+.card__dark {
+    background: hsl(179, 62%, 43%);
+    grid-area: middle;
+}
+
+.card__light {
+    background: hsl(179, 51%, 53%);
+    border-radius: 0 0 0.3rem 0.3rem;
+    grid-area: bottom;
+}
+
+.card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(204, 43%, 93%);
+    margin-bottom: 1rem;
+}
+
+.card__white .card__title {
+    color: hsl(179, 81%, 38%);
+}
+
+.card__white .card__tagline {
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+}
+
+.card__tagline {
+    margin-bottom: 1rem;
+}
+
+.card__content {
+    color: hsl(203, 7%, 66%);
+    line-height: 1.5rem;
+}
+
+.card__price {
+    color: rgb(97, 199, 198);
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.card__large-price {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.card__priceline {
+    color: hsl(204, 43%, 93%);
+}
+
+.card__signup {
+    background: hsl(71, 73%, 54%);
+    text-decoration: none;
+    color: hsl(204, 43%, 93%);
+    padding: 0.7rem 2rem;
+    display: block;
+    text-align: center;
+    border-radius: 0.2rem;
+    margin-top: 2rem;
+    box-shadow: 2px 6px 20px -1px rgba(104, 150, 148, 0.75);
+}
+
+.card__list {
+    padding-left: 0;
+}
+
+.card__item {
+    list-style-type: none;
+    color: hsl(201, 52%, 89%);
+    margin-bottom: 0.2rem;
+}
+
+@media only screen and (min-width: 768px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "top top"
+        "middle bottom";
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 0.5rem;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .card__white {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card__dark {
+        border-radius: 0 0 0 0.5rem;
+    }
+
+    .card__light {
+        border-radius: 0 0 0.5rem 0;
+    }
+
+    .card__heading {
+        font-size: 1.3rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section {
+        max-width: 65%;
+    }
+}
